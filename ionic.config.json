@@ -1,0 +1,7 @@
+{
+  "name": "ratCatcher",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
