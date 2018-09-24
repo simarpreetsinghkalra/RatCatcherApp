@@ -1,0 +1,81 @@
+Response of new user api
+
+{
+    "success": true,
+    "user": {
+        "devices": [],
+        "_id": "5ba5c05f1caadc00153ac4dc",
+        "__v": 0
+    }
+}
+
+
+response of new add device api
+{
+    "success": true,
+    "device": {
+        "mousecount": 0,
+        "killmousenumber": 3,
+        "battery": 0,
+        "status": false,
+        "_id": "5ba5c2d11caadc00153ac4dd",
+        "name": "mydevice",
+        "macaddress": "76:87:j8:c8:a0",
+        "userid": "5ba5c05f1caadc00153ac4dc",
+        "__v": 0
+    }
+}
+
+{
+    "succcess": false,
+    "message": "message"
+}
+
+response of edit device api
+{
+    "success": true,
+    "device": {
+        "mousecount": 6,
+        "killmousenumber": 10,
+        "battery": 0,
+        "status": false,
+        "_id": "5ba5c3271caadc00153ac4df",
+        "name": "Meri Device",
+        "macaddress": "76:87:j8:c8:78",
+        "userid": "5ba5c05f1caadc00153ac4dc",
+        "__v": 0
+    }
+}
+
+get devices
+
+{
+    "success": true,
+    "devices": [
+        {
+            "mousecount": 0,
+            "killmousenumber": 3,
+            "battery": 0,
+            "status": false,
+            "_id": "5ba5c2d11caadc00153ac4dd",
+            "name": "mydevice",
+            "macaddress": "76:87:j8:c8:a0",
+            "userid": "5ba5c05f1caadc00153ac4dc",
+            "__v": 0
+        },
+        {
+            "mousecount": 6,
+            "killmousenumber": 10,
+            "battery": 0,
+            "status": false,
+            "_id": "5ba5c3271caadc00153ac4df",
+            "name": "Meri Device",
+            "macaddress": "76:87:j8:c8:78",
+            "userid": "5ba5c05f1caadc00153ac4dc",
+            "__v": 0
+        }
+    ]
+}
+
+remove device
+
