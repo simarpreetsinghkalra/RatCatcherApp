@@ -1,3 +1,38 @@
 page-devices {
+	.register-device{
+	background-image: url('/assets/imgs/background.png');
+	background-size: cover;
+}
+
+.register-device-form{
+	border-top: 4px solid #1c92d2;
+	padding: 10px;
+	background-color: white;
+	border-radius: 5px;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	transform:translateY(-50%);
+	padding-bottom: 40px;
+}
+
+.devices-list{
+	max-height: 350px;
+	overflow:auto;
+}
+
+.register-device-form h1{
+	margin: 0px;
+	padding : 30px 0px 20px 0px;
+}
+
+.device{
+	border:1px solid grey;
+	padding: 5px;
+	margin-top: 10px;
+	border-radius: 5px;
+	width: 70%;
+	display: inline-block;
+}
 
 }

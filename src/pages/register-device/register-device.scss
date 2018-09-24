@@ -1,3 +1,57 @@
-page-register-device {
+.register-device{
+	background-image: url('/assets/imgs/background.png');
+	background-size: cover;
+}
 
+.register-device-form{
+	border-top: 4px solid #1c92d2;
+	padding: 10px;
+	background-color: white;
+	border-radius: 5px;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	transform:translateY(-50%);
+	padding-bottom: 40px;
+}
+
+.register-device-form h1{
+	margin: 0px;
+	padding : 30px 0px 20px 0px;
+}
+
+.input{
+	border: 1px solid black;
+	border-radius: 5px;
+	margin-top: 20px;
+	padding: 5px;
+	padding-left: 55px;
+	outline: none
+}
+.input-box{
+	position: relative;
+}
+.label{
+	position: absolute;
+	left:30px;
+	top: 50%;
+	transform:translateY(-65%)
+}
+.register-button{
+	width: 70%;
+	height: 50px;
+	background-color: #1c92d2 !important;
+	border-radius: 5px;
+	color: white;
+	margin-top: 50px;
+	font-size: 20px;
+}
+.back-button{
+	height: 20px;
+	width:20px;
+	background-color: black;
+	border-radius: 50%;
+	position: relative;
+	top: 20px;
+	left: 20px
 }

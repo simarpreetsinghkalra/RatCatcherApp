@@ -4,32 +4,67 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<!-- <ion-header>
 
-  <ion-navbar>
-    <ion-title>devices</ion-title>
+  <ion-navbar class="header">
+    <ion-title>Devices</ion-title>
   </ion-navbar>
 
-</ion-header>
+</ion-header> -->
 
 
-<ion-content padding>
-  <ion-list>
-    <ion-item ion-row>
-      <ion-col col-3>
-        Sr. No
-      </ion-col>
-      <ion-col col-9>
+
+<ion-content padding class="register-device">
+  <button class="back-button">Back</button>
+  <div class="register-device-form">
+    <h1>All Devices</h1>
+    <div class="devices-list">
+      <div class="device">
+        <p>Device1</p>
+      </div>
+       <div class="device">
+        <p>Device1</p>
+      </div>
+       <div class="device">
+        <p>Device1</p>
+      </div>
+       <div class="device">
+        <p>Device1</p>
+      </div>
+       <div class="device">
+        <p>Device1</p>
+      </div>
+      <div class="device">
+        <p>Device1</p>
+      </div>
+      <div class="device">
+        <p>Device1</p>
+      </div>
+      <div class="device">
+        <p>Device1</p>
+      </div>
+      
+    </div>
+  </div>
+ <!--  <div>
+    <p>
+      Please fill the information in respective fields.
+    </p>
+  </div>
+  <div class="form">
+    <ion-item>
+      <ion-label>
         Device Name
-      </ion-col>
+      </ion-label>
+      <ion-input [(ngModel)]="deviceName" type="text"></ion-input>
     </ion-item>
-    <ion-item ion-row *ngFor="let item of devices; let i" >
-      <ion-col col-3>
-        {{i}}
-      </ion-col>
-      <ion-col col-9>
-        {{item.name}}
-      </ion-col>
+    <ion-item>
+      <ion-label>
+        Mac-Address
+      </ion-label>
+      <ion-input [(ngModel)]="macAddress" type="text"></ion-input>
     </ion-item>
-  </ion-list>
+  </div>
+  <button ion-button block primary (click)="addDevice()">SUBMIT</button> -->
+
 </ion-content>
