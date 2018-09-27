@@ -25,7 +25,6 @@ export class DevicesPage {
     this.apiService.getDevices(this.apiService.userId).subscribe(res => {
       if(res.success){
         this.devices = res.data;
-        console.log(this.devices);
         this.isLoading = false;
       } else{
         this.apiService.presentToast(res.message);
@@ -35,7 +34,6 @@ export class DevicesPage {
   }
   
   openDeviceInfo(device: Device){
-    console.log(device);
     this.navCtrl.push('DeviceInfoPage',{
       device: device
     });

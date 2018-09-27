@@ -5,8 +5,6 @@ import {Storage} from '@ionic/storage';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { TabsPage } from '../pages/tabs/tabs';
-
 @Component({
   templateUrl: 'app.html'
 })
@@ -20,7 +18,6 @@ export class MyApp {
       this.storage.get('userId').then(val => {
         if(val){
           this.apiService.userId = val;
-          console.log(val);
         }else{
           this.apiService.createNewUser().subscribe(res => {
             if(res.success){

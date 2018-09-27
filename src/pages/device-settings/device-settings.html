@@ -7,12 +7,33 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>deviceSettings</ion-title>
+    <ion-title>Device Settings : {{device.name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+ <ion-item>
+   <ion-label>Name</ion-label>
+   <ion-input type="text" [(ngModel)]="device.name" ></ion-input>
+ </ion-item>
 
+ <ion-item>
+    <ion-label>Mouse Count</ion-label>
+    <ion-input type="text" [(ngModel)]="device.mousecount"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Kill Mouse No.</ion-label>
+    <ion-input type="text" [(ngModel)]="device.killmousenumber" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Power</ion-label>
+    <ion-toggle [(ngModel)]="device.status"></ion-toggle> 
+  </ion-item>
+
+  <button ion-button expanded color="primary" (click)="updateDevice()" >UPDATE</button>
+  <button ion-button expanded color="danger" (click)="removeDevice()">REMOVE DEVICE</button>
 </ion-content>
