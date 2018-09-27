@@ -35,7 +35,7 @@ export class ApiServicesProvider {
   }
 
   addNewDevice(name: string, macaddress: string, userid: string){
-    let body="name=" + name +"&macaddress=" + macaddress + "&userid=5ba5c05f1caadc00153ac4dc";
+    let body="name=" + name +"&macaddress=" + macaddress + "&userid="+this.userId;
     return this.http.post<ApiResponse<Device>>(this.baseUrl + "device/add", body, {
       headers: this.headers
     });

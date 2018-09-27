@@ -11,7 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = TabsPage;
+  rootPage:any = 'HomePage';
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private storage: Storage, private apiService: ApiServicesProvider, private alertCtrl: AlertController) {
     platform.ready().then(() => {
@@ -20,6 +20,7 @@ export class MyApp {
       this.storage.get('userId').then(val => {
         if(val){
           this.apiService.userId = val;
+          console.log(val);
         }else{
           this.apiService.createNewUser().subscribe(res => {
             if(res.success){

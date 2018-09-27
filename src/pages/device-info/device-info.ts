@@ -1,3 +1,4 @@
+import { Device } from './../../modals/device';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -14,12 +15,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'device-info.html',
 })
 export class DeviceInfoPage {
-
+  device: Device;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.device = this.navParams.get('device');
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DeviceInfoPage');
+  }
+
+  openSettings(){
+    this.navCtrl.push('DeviceSettingsPage',{
+      device: this.device
+    });
   }
 
 }

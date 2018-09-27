@@ -16,7 +16,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'devices.html',
 })
 export class DevicesPage {
-  private isLoading = true;
+  public isLoading = true;
   public devices: Device[];
   constructor(public navCtrl: NavController, public navParams: NavParams, private apiService: ApiServicesProvider) {
   }
@@ -25,6 +25,7 @@ export class DevicesPage {
     this.apiService.getDevices(this.apiService.userId).subscribe(res => {
       if(res.success){
         this.devices = res.data;
+        console.log(this.devices);
         this.isLoading = false;
       } else{
         this.apiService.presentToast(res.message);
@@ -32,5 +33,15 @@ export class DevicesPage {
       }
     });
   }
+  
+  openDeviceInfo(device: Device){
+    console.log(device);
+    this.navCtrl.push('DeviceInfoPage',{
+      device: device
+    });
+  }
 
+  backNav(){
+    this.navCtrl.pop();
+  }
 }

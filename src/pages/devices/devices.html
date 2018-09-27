@@ -15,35 +15,19 @@
 
 
 <ion-content padding class="register-device">
-  <button class="back-button">Back</button>
+    <button class="back-btn" icon-only (click)="backNav()"><ion-icon name="arrow-back"></ion-icon></button>
   <div class="register-device-form">
     <h1>All Devices</h1>
-    <div class="devices-list">
-      <div class="device">
-        <p>Device1</p>
+    <ion-spinner *ngIf="isLoading"></ion-spinner>
+    <div class="devices-list" *ngIf="!isLoading && (devices.length < 1)" >
+        <div class="device" >
+          <p>It seems you don't have any device. Please add new device first.</p>
+        </div>
       </div>
-       <div class="device">
-        <p>Device1</p>
+    <div class="devices-list" *ngIf="!isLoading" >
+      <div class="device" *ngFor="let device of devices" (click)="openDeviceInfo(device)"  >
+        <p>{{device.name}}</p>
       </div>
-       <div class="device">
-        <p>Device1</p>
-      </div>
-       <div class="device">
-        <p>Device1</p>
-      </div>
-       <div class="device">
-        <p>Device1</p>
-      </div>
-      <div class="device">
-        <p>Device1</p>
-      </div>
-      <div class="device">
-        <p>Device1</p>
-      </div>
-      <div class="device">
-        <p>Device1</p>
-      </div>
-      
     </div>
   </div>
  <!--  <div>

@@ -5,6 +5,6 @@ export interface Device{
     userid?: string;
     status?: false;
     battery?: number;
-    killmousenuber?: number;
+    killmousenumber?: number;
     mousecount?: number;
 }

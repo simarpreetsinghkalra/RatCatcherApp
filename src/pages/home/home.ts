@@ -22,4 +22,12 @@ export class HomePage {
     console.log('ionViewDidLoad HomePage');
   }
 
+  navRegisterDevice(){
+    this.navCtrl.push('RegisterDevicePage');
+  }
+
+  navViewDevices(){
+    this.navCtrl.push('DevicesPage');
+  }
+
 }

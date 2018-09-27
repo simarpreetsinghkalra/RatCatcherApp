@@ -25,6 +25,7 @@ export class RegisterDevicePage {
     this.apiService.addNewDevice(this.deviceName, this.macAddress, this.apiService.userId).subscribe(res=>{
       if(res.success){
         this.apiService.presentToast("Device added successfully");
+        this.backNav();
       }else{
         this.apiService.presentToast(res.message);
       }
@@ -36,5 +37,9 @@ export class RegisterDevicePage {
         duration: 3000,
         closeButtonText: "OK"
       }).present();
+    }
+    
+    backNav(){
+      this.navCtrl.pop();
     }
 }

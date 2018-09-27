@@ -6,13 +6,67 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>deviceInfo</ion-title>
-  </ion-navbar>
-
+  <ion-toolbar color="primary">
+    <ion-title>{{ device.name }}</ion-title>
+    <ion-buttons end>
+      <button (click)="openSettings()" ion-button transparent icon-only><ion-icon name="settings" color="light"></ion-icon></button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-list *ngIf="device" >
+    <ion-list>
+      <ion-list-header>
+        Device Information
+      </ion-list-header>
+      <ion-item ion-row>
+        <ion-col col-4>
+          Mac Address
+        </ion-col>
+        <ion-col col-8>
+          {{ device.macaddress }}
+        </ion-col>
+      </ion-item>
+
+      <ion-item ion-row>
+          <ion-col col-4>
+            Status
+          </ion-col>
+          <ion-col col-8>
+            {{ device.status }}
+          </ion-col>
+      </ion-item>
+
+      <ion-item ion-row>
+        <ion-col col-4>
+          Battery
+        </ion-col>
+        <ion-col col-8>
+          {{ device.battery }} %
+        </ion-col>
+      </ion-item>
+
+      <ion-item ion-row>
+        <ion-col col-4>
+          Mouse Count
+        </ion-col>
+        <ion-col col-8>
+          {{ device.mousecount }}
+        </ion-col>
+      </ion-item>
+
+      <ion-item ion-row>
+        <ion-col col-6>
+          Kill Mouse Number
+        </ion-col>
+        <ion-col col-6>
+          {{device.killmousenumber}}
+        </ion-col>
+      </ion-item>
+    </ion-list>
+  </ion-list>
 
 </ion-content>
