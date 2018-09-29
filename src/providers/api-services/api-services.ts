@@ -1,6 +1,6 @@
 import { User } from './../../modals/user';
 import { ApiResponse } from './../../modals/api-response';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Device } from '../../modals/device';
 import { ToastController } from 'ionic-angular';
@@ -41,7 +41,7 @@ export class ApiServicesProvider {
     });
   }
 
-  editDevice(deviceid: string, name: string, mousecount: string, killmousenumber: string){
+  editDevice(deviceid: string, name: string, mousecount: number, killmousenumber: number){
     let body = "deviceid=" + deviceid + "&name=" + name + "&mousecount=" + mousecount + "&killmousenumber=" + killmousenumber;
     return this.http.post<ApiResponse<Device>>(this.baseUrl + "device/edit",body,{
       headers: this.headers
@@ -50,7 +50,7 @@ export class ApiServicesProvider {
 
   removeDevice(deviceid: string, userid: string){
     let body = "deviceid=" + deviceid + "&userid=" + userid;
-    return this.http.post(this.baseUrl + "device/remove",body,{
+    return this.http.post<ApiResponse<undefined>>(this.baseUrl + "device/remove",body,{
       headers: this.headers
     });
   }
