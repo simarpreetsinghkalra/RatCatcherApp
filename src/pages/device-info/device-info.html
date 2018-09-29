@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header class="header">
 
   <ion-toolbar color="primary">
     <ion-title>{{ device.name }}</ion-title>
@@ -15,58 +15,73 @@
 </ion-header>
 
 
-<ion-content padding>
-
-  <ion-list *ngIf="device" >
-    <ion-list>
-      <ion-list-header>
-        Device Information
-      </ion-list-header>
-      <ion-item ion-row>
-        <ion-col col-4>
-          Mac Address
-        </ion-col>
-        <ion-col col-8>
-          {{ device.macaddress }}
-        </ion-col>
-      </ion-item>
-
-      <ion-item ion-row>
+<ion-content padding class="page-background">
+  <button class="back-btn" icon-only (click)="backNav()"><ion-icon name="arrow-back"></ion-icon></button>
+  <div class="inner-div">
+    <ion-list *ngIf="device" >
+      <ion-list>
+        <ion-list-header class="inner-header">
+          <h1>Device Information</h1>
+        </ion-list-header>
+        <ion-item ion-row>
           <ion-col col-4>
-            Status
+            <span>Name</span>
           </ion-col>
           <ion-col col-8>
-            {{ device.status }}
+            {{ device.name }}
           </ion-col>
-      </ion-item>
+        </ion-item>
+        <ion-item ion-row>
+          <ion-col col-4>
+            <span>MAC Address</span>
+          </ion-col>
+          <ion-col col-8>
+            {{ device.macaddress }}
+          </ion-col>
+        </ion-item>
 
-      <ion-item ion-row>
-        <ion-col col-4>
-          Battery
-        </ion-col>
-        <ion-col col-8>
-          {{ device.battery }} %
-        </ion-col>
-      </ion-item>
+        <ion-item ion-row>
+            <ion-col col-4>
+              <span>Status</span>
+            </ion-col>
+            <ion-col col-8>
+              {{ device.status }}
+            </ion-col>
+        </ion-item>
 
-      <ion-item ion-row>
-        <ion-col col-4>
-          Mouse Count
-        </ion-col>
-        <ion-col col-8>
-          {{ device.mousecount }}
-        </ion-col>
-      </ion-item>
+        <ion-item ion-row>
+          <ion-col col-4>
+            <span>Battery</span>
+          </ion-col>
+          <ion-col col-8>
+            {{ device.battery }} %
+          </ion-col>
+        </ion-item>
 
-      <ion-item ion-row>
-        <ion-col col-6>
-          Kill Mouse Number
-        </ion-col>
-        <ion-col col-6>
-          {{device.killmousenumber}}
-        </ion-col>
-      </ion-item>
+        <ion-item ion-row>
+          <ion-col col-4>
+            <span>Mouse Count</span>
+          </ion-col>
+          <ion-col col-8>
+            {{ device.mousecount }}
+          </ion-col>
+        </ion-item>
+
+        <ion-item ion-row>
+          <ion-col col-6>
+            <span>Kill Mouse Number</span>
+          </ion-col>
+          <ion-col col-6>
+            {{device.killmousenumber}}
+          </ion-col>
+        </ion-item>
+      </ion-list>
     </ion-list>
-  </ion-list>
+    <ion-buttons>
+      <button class="setting-button" (click)="openSettings()">
+        <h4>Edit</h4>
+      </button>
+    </ion-buttons>  
+  </div>
 
 </ion-content>

@@ -1,3 +1,51 @@
 page-device-info {
-
+	.header{
+		display: none
+	}
+	.page-background{
+		padding: 20px;
+		background-image: url('/assets/imgs/background.png');
+		background-size: cover;
+	}
+	.inner-div{
+		border-top: 4px solid #1c92d2;
+		padding: 10px;
+		background-color: white;
+		border-radius: 5px;
+		text-align: center;
+		position: relative;
+		top: 50%;
+		transform:translateY(-50%);
+		padding-bottom: 40px;
+	}
+	.inner-header{
+		border:0px solid black
+	}
+	.inner-header h1{
+		color:black	
+	}
+	span{
+		color:grey;
+	}
+	.back-btn{
+		background-color: transparent;
+		font-size: 18px;
+		padding: 0;
+		color: white;
+		border-radius: 40px;
+		height: 55px;
+		width: 55px;
+	}
+	.setting-button{
+		width: 200px;
+		height: 50px;
+		border-radius: 5px;
+		background-color:  #1c92d2;
+	}
+	h4{
+		display: inline;
+		color: white;
+		font-weight: 400;
+		letter-spacing: 1px;
+	}
 }
