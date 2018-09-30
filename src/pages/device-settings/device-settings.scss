@@ -1,3 +1,41 @@
 page-device-settings {
-
+	.hidden{
+		display: none;
+	}
+	.edit-device{
+		background-image: url('/assets/imgs/background.png');
+		background-size: cover;
+	}
+	.edit-info{
+		border-top: 4px solid #1c92d2;
+		padding: 10px;
+		background-color: white;
+		border-radius: 5px;
+		text-align: center;
+		position: relative;
+		top: 50%;
+		transform:translateY(-50%);
+		padding-bottom: 40px;
+	}
+	h1{
+		color: black;
+		padding: 20px
+	}
+	button{
+		margin-top: 50px !important;
+		padding: 20px !important;
+		width: 150px;
+	}
+	input{
+		border:0px 
+	}
+	.back-btn{
+		background-color: transparent;
+		font-size: 15px;
+		padding: 0;
+		color: white;
+		border-radius: 40px;
+		height: 55px;
+		width: 55px;
+	}
 }
