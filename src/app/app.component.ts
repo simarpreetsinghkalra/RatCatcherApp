@@ -11,10 +11,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 export class MyApp {
   rootPage:any = 'HomePage';
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private storage: Storage, private apiService: ApiServicesProvider, private alertCtrl: AlertController) {
+  constructor(platform: Platform, private statusBar: StatusBar, splashScreen: SplashScreen, private storage: Storage, private apiService: ApiServicesProvider, private alertCtrl: AlertController) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
+      this.statusBar.styleLightContent();
       this.storage.get('userId').then(val => {
         if(val){
           this.apiService.userId = val;

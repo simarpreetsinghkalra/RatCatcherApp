@@ -29,4 +29,8 @@ export class DeviceInfoPage {
     });
   }
 
+  backNav(){
+    this.navCtrl.pop();
+  }
+
 }

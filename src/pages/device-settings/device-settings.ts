@@ -29,7 +29,8 @@ export class DeviceSettingsPage {
   updateDevice(){
     this.apiService.editDevice(this.device._id,this.device.name,this.device.killmousenumber,this.device.killmousenumber).subscribe((res: ApiResponse<Device>)=>{
       if(res.success){
-        this.presentToast("Device info updated.")     
+        this.presentToast("Device info updated.") 
+        this.navCtrl.pop();    
       } else{
         this.presentToast(res.message);
       }
@@ -40,7 +41,7 @@ export class DeviceSettingsPage {
     this.apiService.removeDevice(this.device._id,this.apiService.userId).subscribe(res=>{
       if(res.success){
         this.presentToast("Device Sucessfully Removed.");
-        this.navCtrl.pop();
+        this.navCtrl.popTo(this.navCtrl.getByIndex(this.navCtrl.length()-3));
       } else{
         this.presentToast(res.message);
       }

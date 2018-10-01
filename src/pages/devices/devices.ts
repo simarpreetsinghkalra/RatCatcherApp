@@ -21,7 +21,8 @@ export class DevicesPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private apiService: ApiServicesProvider) {
   }
 
-  ionViewDidLoad() {
+  ionViewDidEnter(){
+    this.isLoading = true;
     this.apiService.getDevices(this.apiService.userId).subscribe(res => {
       if(res.success){
         this.devices = res.data;
@@ -31,6 +32,9 @@ export class DevicesPage {
         this.isLoading = false;
       }
     });
+  }
+  ionViewDidLoad() {
+    
   }
   
   openDeviceInfo(device: Device){

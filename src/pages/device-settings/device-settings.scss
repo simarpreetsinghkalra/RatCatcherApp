@@ -1,6 +1,6 @@
 page-device-settings {
-	.hidden{
-		display: none;
+	.scroll-content{
+		padding: 16px!important;
 	}
 	.edit-device{
 		background-image: url('/assets/imgs/background.png');
@@ -24,18 +24,20 @@ page-device-settings {
 	button{
 		margin-top: 50px !important;
 		padding: 20px !important;
-		width: 150px;
+		width: 125px;
+		&.back-btn{
+			margin-top: 0 !important;
+			background-color: transparent;
+			font-size: 15px;
+			padding: 0;
+			color: white;
+			border-radius: 40px;
+			height: 55px;
+			width: 55px;
+		}
 	}
 	input{
 		border:0px 
 	}
-	.back-btn{
-		background-color: transparent;
-		font-size: 15px;
-		padding: 0;
-		color: white;
-		border-radius: 40px;
-		height: 55px;
-		width: 55px;
-	}
+	
 }
